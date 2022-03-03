@@ -1,0 +1,22 @@
+     body{
+         padding-top: 40px;
+     }
+
+    .language img{
+        height: 25px;
+        transform: scale(1.2);
+    }
+    .lang-img{
+        height: 25px;
+        transform: scale(1.2);
+    }
+    
+    .dropdown-menu.language-menu{
+        min-width: auto;
+    }
+    
+    .main-logo{
+        height: 45px;
+        position: relative;
+        top: -9px;
+    }

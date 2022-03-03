@@ -1,0 +1,757 @@
+    body{
+        background: #100b2d;
+    }    
+
+     header.landing-image{  
+        height:100vh; 
+        background-image: url("../images/page/header-test.jpg");
+        background-size: cover;
+        z-index: 2;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        position: relative;
+     }
+
+    .navbar-default{
+        background-color: rgba(165, 23, 23, 0.67);
+    }
+    
+    .wrapper-panel{
+        border: 3px solid rgba(255,255,255,0.3);
+        border-radius: 10px;
+        margin: 10px;
+        padding: 10px;
+        background: rgba(0,0,0,0.1);
+    }
+    
+    #main-trade-button{
+        position: relative;
+        overflow: hidden;
+        font-weight: bold;
+        color: white;
+        opacity:0.4;
+        transition: all 1s ease-in-out;
+        transition-property: opacity, box-shadow;
+    }
+    #main-trade-button .icon{
+        opacity:0.6;
+        display: block;
+        position: absolute;
+        right:5px;
+        top: -1px;
+        width: 51px;
+        height: 51px;
+        transition: transform 1s ease-in-out;
+    }
+    
+    #main-trade-button.enabled{
+        opacity: 1;
+        /*box-shadow: 0px 0px 6px 2px #9e733c;*/
+        box-shadow: 0px 0px 6px 2px green;
+    }
+    
+    #main-trade-button.enabled .icon{
+        animation: spin-icon 1s ease-in-out;
+    }
+    
+    #main-trade-button.enabled:hover .icon{
+        transform: rotate(-360deg);
+    }
+    
+    .inventory-header-description{
+        text-transform: uppercase;
+        font-size: 23px;
+    }
+
+
+.amCustomScrollbar{
+            background: #0a162f;
+            /*background: #071427;*/
+            overflow-y: scroll;
+            overflow-x: hidden;
+            box-shadow: 0 0 5px black;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            width: 100%;
+            margin-top: 5px;
+            border-radius:4px;
+          }
+          
+          ::-webkit-scrollbar {
+            height: 12px;
+            width: 8px;
+            background: #1e2b3e;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #eaab46;
+            -webkit-border-radius: 1ex;
+            -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+        }
+
+        ::-webkit-scrollbar-corner {
+            background: #000;
+        }
+        .inventory_carousel{
+            display: none;
+        }
+        
+        #activeItemPlaceholder{
+            text-align:center;
+            background: #003345;
+            padding-top: 5px;
+            margin: 5px;
+            border-radius: 5px;  
+            height: 250px;
+            position: relative;
+        }
+        
+        #activeItemPlaceholder img{
+                margin: auto;
+                width:80%; 
+                position: absolute;
+                left: 10%;
+                bottom: 5px;
+        }
+        
+        .single-item.active-item, .single-item.active-item:hover{
+            background: #003345;
+        }
+        
+        .single-item.chose-item, .single-item.chose-item:hover{
+            background: #003345;
+            opacity:0.1;
+            cursor:not-allowed;
+        }
+        
+        .single-item .overstock-label{
+            color: white;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 70%;
+            width:100%;
+        }
+        
+        .single-item{
+                text-align:center;
+                height: 112px;
+                width: 112px;
+                position: relative;
+                background: #39294A;
+                /*background: #32587D;*/
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#161d4e+0,030308+100 */
+/*background: #115baf; /* Old browsers */
+/*background: -moz-radial-gradient(center, ellipse cover,  #115baf 15%, #030308 100%); /* FF3.6-15 */
+/*background: -webkit-radial-gradient(center, ellipse cover,  #115baf 15%,#030308 100%); /* Chrome10-25,Safari5.1-6 */
+/*background: radial-gradient(ellipse at center,  #115baf 15%,#030308 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#115baf', endColorstr='#030308',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+                text-shadow: 1px 1px 2px navy;
+                padding-top: 5px;
+                margin: 1.5px;
+                border-radius: 0px;
+                cursor: hand;
+                cursor: pointer;
+               
+                display: inline-block;
+                /*overflow: hidden;*/
+        }
+        
+          .single-item .item-menu{
+            position: absolute;
+            top:0;
+            left: 0;
+            height: 112px;
+            width: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 200;
+            border-radius: 0px;
+            
+        }
+        
+        .single-item:hover{
+                background: #59466d;
+        }
+        
+        .single-item .item-name, .chosen-item .item-name{
+                line-height: 10px;
+                position: absolute;
+                top: 13px;
+                width: 90%;
+                left:5%;
+                z-index: 10;
+                font-size: 80%;
+        }
+        
+        .item-unavailable{
+            opacity: 0.2;
+        }
+
+        .single-item-reservable{
+            filter: grayscale(45%) contrast(70%);
+        }
+
+        .single-item-reservable:hover{
+            filter: none;
+        }
+        
+        .item-stattrak .item-name{
+            color:#FFCC00;
+            font-weight: bold;
+        }
+        
+        .single-item .item-price{
+            position: absolute;
+            text-align: center;
+            bottom: 0px;
+            width: 100%;
+            left: 0;
+            z-index: 20;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .single-item .item-reservable{
+            position: absolute;
+            text-align: center;
+            bottom: 18px;
+            width: 100%;
+            left: 0;
+            z-index: 20;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .single-item .item-bot-number{
+            top: -7px;
+            position: relative;
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 0px 1px;
+            border-radius: 2px;
+            background: rgba(255,255,255,0.1);
+            z-index: 100;
+        }
+        
+        .single-item.item-stattrak .item-price{
+            color: #ffcc00;
+        }
+        
+        .single-item.item-stattrak .wear-name{
+            color: #ffcc00;
+        }
+        
+        .single-item img, .chosen-item img{
+                margin: auto;
+                width:96%; 
+                position: absolute;
+                left: 2%;
+                top: 11px;
+                z-index:1;
+                
+        }
+        
+        .single-item .game-icon{
+            display: block;
+            width:15px;
+            height:15px;
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            left: auto;
+            top: auto;
+        }
+        
+        .popover.bottom .arrow:after {
+            border-bottom-color: rgba(0,0,0,0.8);
+        }
+        
+        .single-item .stickers{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 23px;
+            z-index:0;
+        }
+        
+        .single-item .stickers img{
+            display: block;
+            position: static;
+            bottom: auto;
+            left: auto;
+        }
+        
+        .popover-wear{
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        
+        .popover{
+            background: rgba(0,0,0,0.8);
+            border-radius: 4px;
+        }
+        
+        .item-popover{
+            text-align: center;
+            font-size: 90%;
+        }
+        
+        .stickers-popover img{
+            display: inline-block;
+            position: static;
+            width:80px;
+           
+            
+        }
+        
+        .stickers-popover{
+            margin-top: 2px;
+        }
+        
+        .stickers-popover .single-sticker{
+            
+            clear:both;
+        }
+        
+        .stickers-popover .single-sticker .sticker-name{
+            
+            font-size: 11px;
+            display: block;
+            margin-bottom: 14px;
+        }
+        
+        .single-item .item-menu .btn{
+            margin-top: 2px;
+            margin-bottom: 5px;
+            width:72px;
+        }
+        
+        .single-item .wear-name{
+            display: inline-block;
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            font-weight: bold;
+            font-size: 80%;
+        }
+        
+         .single-item .wear-name.stattrak{
+            color: #ffcc00;
+        }
+        
+        .single-item .stattrak-label{
+            display: inline-block;
+            position: absolute;
+            right: 28px;
+            top: 2px;
+            font-weight: bold;
+            font-size: 80%;
+            color: #ffcc00;
+            background: rgba(255,255,255,0.1);
+            padding: 0px 2px;
+        }
+        
+        .single-item .quantity-label{
+                font-size: 12px;
+                left: 5px;
+                position: absolute;
+                top: 1px;
+        }
+
+        .column-user .single-item .quantity-label{
+                top: 15px;
+        }
+
+        .single-item .vol-label{
+            display: inline-block;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            font-weight: bold;
+            font-size: 80%;
+            z-index: 2;
+        }
+        
+        #input_netto_value{
+            background: #72EA9A;
+        }
+        
+        .unavailable{
+            opacity: 0.2;
+        }
+        
+        .chosen-item{
+                text-align:center;
+                height: 150px;
+                position: relative;
+                margin-top: 5px;
+                background: #003345;
+                padding-top: 5px;
+                margin: 5px;
+                border-radius: 5px;
+                
+                width: 30%;
+                float: left;
+        }
+        
+        .chosen-item .item-name{
+            background: rgba(0,0,0,0.35);
+            padding-top: 3px;
+            padding-bottom: 3px;
+            top:26px;
+        }
+        
+        .chosen-item img{
+            bottom:30px;
+        }
+        
+        .remove-button{
+            position: absolute;
+            width: 80%;
+            left: 10%;
+            bottom: 5px;
+        }
+        .addItemButton-disabled{
+            opacity: 0.15;
+        }
+        .saveButton-disabled{
+            opacity: 0.15;
+        }
+           
+        .box-items{
+            
+            text-align: center;
+        }
+        .box-items-user-chosen{
+            
+            text-align: center;
+        }
+        
+        .mCustomScrollbar{
+            margin-top:15px;
+        }
+        
+        .hint-inspect{
+            color:white;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 4px;
+            margin-bottom: 8px;
+        }
+        .hint-inspect .text{
+            position: relative;
+            top: 2px;
+        }
+        .hint-inspect img{
+            width: 20px;
+        }
+        
+        
+        .mCustomScrollBox{
+            background: #2b3749;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px black;
+            width: 100%;
+        }
+        
+        .refresh-button{
+            color: orange;
+            padding:6px 7px 6px; 
+            margin-right: 10px; 
+            margin-left: 5px;
+            border-radius: 50%;
+        }
+        
+        .refresh-button:focus,.refresh-button img:focus {outline:none;}
+        
+        .refresh-button img{
+            -webkit-transition: -webkit-transform .8s ease-in-out;
+            transition:         transform .8s ease-in-out;
+        }
+        
+        .refresh-button:hover img{
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+        
+        .item_filter_input{
+            background: url("../images/page/search.png") no-repeat left center rgba(255,255,255,0.2) ;
+            color:white;
+            border:none;
+            padding: 8px;
+            padding-left: 32px;
+            margin-left: 10px;
+            display: inline-block;
+            position: relative;
+            top: 2px;
+        }
+        
+        .promo-code-wrapper{
+            text-align: center;
+        }
+        
+        .promo_code_input{
+            background: rgba(255,255,255,0.2);
+            color:white;
+            border:none;
+            padding: 5px 10px;
+            margin: auto;
+            display: inline-block;
+            position: relative;
+            top: 2px;
+            width:112px;
+        }
+        
+        .item_filter_input:focus,.promo_code_input:focus{
+            background-color: rgba(255,255,255,0.3);
+        }
+        
+        .sort-dropdown{
+            margin-right: 10px;
+        }
+        
+        .categories{
+            text-align: center;
+            font-size: 17px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 12px;
+            font-weight: bold;
+            padding-top: 1px;
+            padding-bottom: 10px;
+            padding-left:10px;
+            padding-right: 10px;
+            margin-top: -10px;
+        }
+        
+        .category{
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .bot-filters-wrapper{
+            text-align: center;
+            background: rgba(0,0,0,0.3);
+            border-radius: 12px;
+            padding-top: 1px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-top: 32px;
+        }
+        
+        .bot-filters-wrapper .ui-slider-range {
+            background: #FFCC66;
+            border: none;
+            opacity: 0.5;
+        }
+        
+        .bot-filters-wrapper .ui-slider-handle {
+            background: #eaab46;
+            border: none;
+        }
+        
+        .bot-filters-wrapper .checkboxes-wrapper{
+            text-align: left;
+            padding-left: 45px;
+        }
+        
+        #main-trade-button-loader{
+            width:100%;
+            height:140px;
+            display:none;
+            text-align: center;
+        }
+        
+        #main-trade-button-loader object{
+            width: 48px;
+            height: 48px;;
+        }
+        
+        
+        .btn-primary{
+            background-color:#eaab46;
+        }
+        
+        .btn-primary:hover{
+            background-color:#E29522;
+        }
+        
+        .single-item.mini-item{
+            cursor: auto;
+            pointer: auto;
+            width:70px;
+            height:70px;
+            margin-bottom:0;
+        }
+        
+        .single-item.mini-item:hover{
+           /*background: #5487ce;
+           background: -moz-radial-gradient(center, ellipse cover,  #5487ce 0%, #07447c 100%);
+           background: -webkit-radial-gradient(center, ellipse cover,  #5487ce 0%,#07447c 100%);
+           background: radial-gradient(ellipse at center,  #5487ce 0%,#07447c 100%);
+           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5487ce', endColorstr='#07447c',GradientType=1 );
+           */
+        }
+        
+        .single-item.mini-item img{
+            top:13px;
+            transition: transform 0.2s ease-in;
+        }
+        
+        .single-item.mini-item img:hover{
+            transform: scale(2);
+        }
+        .single-item.mini-item .item-name{
+            top:0;
+            font-size:10px;
+            display:none;
+        }
+        
+        .last-trade{
+            border-bottom: 1px solid #4F7599;
+            padding-top:10px;
+            padding-bottom: 9px;
+        }
+        
+        .last-trade:last-child{
+            border-bottom: none;
+        }
+        .last-trade:nth-child(odd){
+            background: rgba(255,255,255,0.05);
+        }
+        
+        .item-rare-name{
+            color:#f36252;
+        }
+        
+        .name-CSGO_Type_Knife{
+            color:#e493e4;
+        }
+        
+        .name-CSGO_Type_WeaponCase, .name-CSGO_Tool_Sticker, .name-CSGO_Type_MusicKit, .name-CSGO_Type_MusicKit, .name-CSGO_Type_Collectible{
+            color:#b1b1b1;
+        }
+        
+        .name-CSGO_Tool_WeaponCase_KeyTag{
+            color:#33CC33;
+        }
+        
+        .item-stattrakknife-name{
+            color:#e493e4;
+        }
+        
+        .name-Type_Hands{
+            color:#75bbf5;
+        }
+        
+        .item-souvenir{
+            border: 1px solid #f0ad4e;
+        }
+        
+        .item-souvenir-name{
+            color: #f0ad4e !important;
+        }
+        
+        .wear-block{
+            text-align: left;
+        }
+        
+        .wear-block .progress{
+            height: 7px;
+        }
+        
+        .wear-block .wear-pointer{
+            margin-bottom: -5px;
+            font-size: 90%;
+            margin-left: -3%;
+        }
+        
+        .wear-block .progress-bar-fn{
+            background: #008000;
+        }
+        
+        .wear-block .progress-bar-bs{
+            background: #993A38;
+        }
+        
+        .sliderValue{
+            width:74px;
+            height: 30px;
+            font-weight: bold;
+            border: none;
+            color:white;
+            text-align:center;
+            background:rgba(255,255,255,0.2);
+            margin-bottom:16px;
+        }
+        
+        .all-trades-wrapper{
+            text-align: center;
+            font-size: 17px;
+            margin-bottom: 11px;
+        }
+        
+        .all-trades-wrapper .lbl{
+            position: relative;
+            
+            font-size: 17px;
+        }
+        
+        .all-trades-wrapper .odometer,  .odometer.odometer-auto-theme, .all-trades-wrapper .odometer.odometer-theme-default{
+            font-weight: bold;
+            color: #ffc80a;
+        }
+        
+        .users-online-wrapper, .balance-value-wrapper{
+             font-size: 16px;
+             position: relative;
+             top: 1px;
+        }
+        
+        .counter-users, .balance-value-color, .balance-value-color-dolar-sign{
+            font-weight: bold;
+            color: #ffc80a;
+        }
+        
+        @media only screen and (min-width: 480px) {
+            .dropdown.filter-dropdown:hover .dropdown-menu{
+                display: block;
+                margin-top: 0; 
+            }
+        }
+        
+        .filters-info{
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        
+        .filter-dropdown,
+        .filter-dropdown button,
+        .filter-dropdown .dropdown-menu
+        {
+            width: 100%;
+        }
+        
+        .filter-dropdown{
+            margin-top: 15px;
+        }
+        
+        .filter-dropdown .dropdown-menu .btn{
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        
+        .filter-dropdown-button {
+            padding-top:4px;
+            pading-bottom:4px;
+        }
+        
+     @keyframes spin-icon {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(-360deg); }
+    }

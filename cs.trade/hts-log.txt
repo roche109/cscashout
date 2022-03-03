@@ -1,0 +1,19 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 01 Mar 2022 13:13:46 at https://cs.trade/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://cs.trade/ -O1 "C:\My Web Sites\cs.trade" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+13:14:15	Error: 	"Bad Request" (400) at link https://www.googletagmanager.com/gtm.js?id= (from https://cs.trade/)
+13:15:20	Error: 	"Not Found" (404) at link https://cs.trade/xhr.js (from https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js)
+13:15:20	Error: 	"Not Found" (404) at link https://cs.trade/GET (from https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js)
+13:15:20	Error: 	"Not Found" (404) at link https://cs.trade/lib/widget-management.js (from https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js)
+13:15:20	Warning: 	File not parsed, looks like binary: https://cs.trade/fonts/glyphicons-halflings-regular.woff2
+13:15:20	Error: 	"Not Found" (404) at link https://cs.trade/c (from https://connect.facebook.net/en_US/fbevents.js)
+13:15:20	Error: 	"Not Found" (404) at link https://cs.trade/b (from https://connect.facebook.net/en_US/fbevents.js)
+13:15:20	Error: 	"Not Found" (404) at link https://cs.trade/POST (from https://connect.facebook.net/en_US/fbevents.js)
+
+HTTrack Website Copier/3.49-2 mirror complete in 3 minutes 15 seconds : 248 links scanned, 239 files written (5174072 bytes overall) [3406879 bytes received at 17471 bytes/sec], 4187704 bytes transferred using HTTP compression in 135 files, ratio 24%, 11.8 requests per connection
+(7 errors, 1 warnings, 0 messages)

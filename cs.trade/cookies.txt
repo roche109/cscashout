@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+cs.trade	TRUE	/	FALSE	1999999999	PHPSESSID	dactcrrpmb6aaun71p1jj41f63
+
